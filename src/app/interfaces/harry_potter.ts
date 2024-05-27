@@ -1,17 +1,10 @@
-export interface Hechizos{
-id: number;
-hechizo: string;
-uso: string
-}
-
-export interface Info{
-
+export interface Info {
     id: number;
     tipo: string;
     contenido: string
 }
 
-export interface Personajes{
+export interface Personajes {
     id: number;
     personaje: string;
     apodo: string;
@@ -21,11 +14,25 @@ export interface Personajes{
     hijos: Array<string>;
     imagen: any
 }
-export interface libros{
+
+export interface libros {
     id: number;
     libro:string;
     titulo_original: string;
     fecha_de_lanzamiento: string;
     autora: string;
     descripcion: string;
+}
+
+export interface Hechizos {
+    id: number;
+    hechizo: string;
+    uso: string
+}
+
+export interface data {
+    info: Array<Info>;
+    personajes: Array<Personajes>;
+    libros: Array<libros>;
+    hechizos: Array<Hechizos>;
 }

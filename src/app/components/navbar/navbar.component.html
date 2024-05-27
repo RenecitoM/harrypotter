@@ -1,28 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/on/hechizos">Hechizos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/on/personajes">Personajes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/on/libros">Libros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/on/info">Informacion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="setView('hechizos')">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="setView('hechizos')" [class.active]="currentView === 'hechizos'">Hechizos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="setView('personajes')" [class.active]="currentView === 'personajes'">Personajes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="setView('libros')" [class.active]="currentView === 'libros'">Libros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="setView('info')" [class.active]="currentView === 'info'">Informacion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
+@if (currentView === 'hechizos') {
+  <app-page-hechizos></app-page-hechizos>
+}
+@if (currentView === 'personajes') {
+  <app-page-personajes></app-page-personajes>
+}
+@if (currentView === 'libros') {
+  <app-page-libros></app-page-libros>
+}
+@if (currentView === 'info'){
+  <app-page-info></app-page-info>
+}

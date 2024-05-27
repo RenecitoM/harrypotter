@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HarrypotterService } from '../../core/services/harrypotter.service';
-import { Personajes, libros } from '../../interfaces/harry_potter';
-import { NavbarComponent } from '../navbar/navbar.component';
+import {libros } from '../../interfaces/harry_potter';
 
 @Component({
   selector: 'app-page-libros',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [],
   templateUrl: './page-libros.component.html',
   styleUrl: './page-libros.component.scss'
 })

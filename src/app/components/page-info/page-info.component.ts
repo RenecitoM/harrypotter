@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Info } from '../../interfaces/harry_potter';
 import { HarrypotterService } from '../../core/services/harrypotter.service';
-import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-page-info',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [],
   templateUrl: './page-info.component.html',
   styleUrl: './page-info.component.scss'
 })

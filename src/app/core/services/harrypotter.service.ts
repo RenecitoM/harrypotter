@@ -8,8 +8,6 @@ import { Hechizos } from '../../interfaces/harry_potter';
 })
 export class HarrypotterService {
 
-
-
   constructor(private http: HttpClient) { }
 
   getInfoList(): Observable<any>{

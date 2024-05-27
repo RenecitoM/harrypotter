@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-comment-like',
   templateUrl: './comment-like.component.html',
-  styleUrls: ['./comment-like.component.css'],
+  styleUrls: ['./comment-like.component.scss'],
   imports: [FormsModule],
   standalone: true
 })
