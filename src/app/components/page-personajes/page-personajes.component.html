@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<ul>
+    @for ( item of  personajeList; track $index){
+        <tr>
+            <th>{{item.personaje}}</th>
+            <th>{{item.apodo}}</th>
+            <th>{{item.estudianteDeHogwarts}}</th>
+            <th>{{item.casaDeHogwarts}}</th>
+            <th>{{item.interpretado_por}}</th>
+            <th>{{item.hijos}}</th>
+            <th>{{item.imagen}}</th>
+        </tr>
+    }
+</ul>

@@ -1,0 +1,23 @@
+<div class="comment-like">
+    <div class="comment-section">
+      <h3>Comments</h3>
+      @for (comment of comments; track $index) {
+      <div>
+        <p>{{comment.text}}</p>
+      </div>
+      }
+      <form action="" [(ngModel)]="newComment">
+      <input  placeholder="Add a comment"/>
+      <button (click)="addComment()">Add Comment</button>
+    </form>
+    </div>
+  
+    <div class="like-section">
+      <h3>Likes</h3>
+      <button (click)="toggleLike()">
+        {{liked ? 'Unlike' : 'Like'}}
+      </button>
+      <p>{{likes}} Likes</p>
+    </div>
+  </div>
+  

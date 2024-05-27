@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<ul>
+    @for ( item of  LibrosList; track $index){
+        <tr>
+            <th>{{item.libro}}</th>
+            <th>{{item.titulo_original}}</th>
+            <th>{{item.fecha_de_lanzamiento}}</th>
+            <th>{{item.descripcion}}</th>
+        </tr>
+    }
+</ul>

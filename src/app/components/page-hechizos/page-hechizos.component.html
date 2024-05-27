@@ -1,0 +1,15 @@
+
+  <app-navbar></app-navbar>
+    <ul>
+        @for ( item of  hechizoList; track $index){
+            <tr>
+                <th>{{item.hechizo}}</th>
+                <th>{{item.uso}}</th>
+            </tr>
+        }
+    </ul>
+
+    <app-comment-like></app-comment-like>
+
+    
+
